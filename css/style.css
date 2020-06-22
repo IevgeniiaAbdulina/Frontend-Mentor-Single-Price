@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+body .card .why-us .why-us-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e5eff5;
+}
+
+body .card .why-us .links a {
+  text-decoration: none;
+  color: #e5eff5;
+  transition: 0.2s;
+}
+
+body .card .why-us .links a:hover {
+  text-decoration: underline;
+  color: #98a6bd;
+}
+
+footer {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #98a6bd;
+}
+
+footer a {
+  text-decoration: none;
+  color: #c0df34;
+  transition: 0.2s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #2ab2af;
+}
