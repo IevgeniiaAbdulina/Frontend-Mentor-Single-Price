@@ -1,28 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700");
+.card {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px #98a6bd;
+  display: grid;
+  grid-template-columns: 100% 50% 50%;
+  border: solid red;
+}
+
+.button-primary {
+  display: inline-block;
+  width: 200px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 8px 20px;
+  margin: 4px;
+  transition: 0.2s;
+}
+
+.button-primary:hover {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background-color: #c0df34;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: "Karla", sans-serif;
   font-size: 16px;
+  background-color: #e5eff5;
 }
 
-body .card .why-us .why-us-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #e5eff5;
-}
-
-body .card .why-us .links a {
+a {
   text-decoration: none;
-  color: #e5eff5;
   transition: 0.2s;
 }
 
-body .card .why-us .links a:hover {
+a:hover {
   text-decoration: underline;
+}
+
+.header-title {
+  display: grid;
+  background-color: #fff;
+  color: #2ab2af;
+}
+
+.header-subtitle {
+  color: #c0df34;
+}
+
+.header-content {
+  color: #98a6bd;
+}
+
+.why-us .why-us-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.why-us .links a {
+  color: white;
+}
+
+.why-us .links a:hover {
   color: #98a6bd;
 }
 
@@ -33,12 +86,9 @@ footer {
 }
 
 footer a {
-  text-decoration: none;
   color: #c0df34;
-  transition: 0.2s;
 }
 
 footer a:hover {
-  text-decoration: underline;
   color: #2ab2af;
 }

@@ -1,18 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700");
-
-$layout-mobile: 375px;
-$layout-desktop: 1440px;
-
-$color-primary-cyan: hsl(179, 62%, 43%);
-$color-primary-bright-yellow: hsl(71, 73%, 54%);
-
-$color-neutral-light-gray: hsl(204, 43%, 93%);
-$color-neutral-grayish-blue: hsl(218, 22%, 67%);
-
-$body-font-family: "Karla", sans-serif;
-$body-font-size: 16px;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
+@import "config";
+@import "utilities";
+@import "button";
 
 * {
   margin: 0;
@@ -20,48 +8,58 @@ $font-weight-bold: 700;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: $body-font-family;
   font-size: $body-font-size;
+  background-color: $color-neutral-light-gray;
+}
 
-  .card {
-    .header {
-      .header-title {
-      }
-      .header-subtitle {
-      }
-      .header-content {
-      }
+a {
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  &-title {
+    display: grid;
+    background-color: #fff;
+    color: $color-primary-cyan;
+  }
+  &-subtitle {
+    color: $color-primary-bright-yellow;
+  }
+  &-content {
+    color: $color-neutral-grayish-blue;
+  }
+}
+
+.subscription {
+  .subscription-title {
+  }
+  .price {
+  }
+  .subscription-content {
+  }
+}
+
+.why-us {
+  .why-us-title {
+    font-size: 1.2rem;
+    font-weight: $font-weight-bold;
+    color: white;
+  }
+  .links {
+    a {
+      color: white;
     }
 
-    .subscription {
-      .subscription-title {
-      }
-      .price {
-      }
-      .subscription-content {
-      }
-      button {
-      }
-    }
-
-    .why-us {
-      .why-us-title {
-        font-size: 1.2rem;
-        font-weight: $font-weight-bold;
-        color: $color-neutral-light-gray;
-      }
-      .links {
-        a {
-          text-decoration: none;
-          color: $color-neutral-light-gray;
-          transition: 0.2s;
-        }
-
-        a:hover {
-          text-decoration: underline;
-          color: $color-neutral-grayish-blue;
-        }
-      }
+    a:hover {
+      color: $color-neutral-grayish-blue;
     }
   }
 }
@@ -72,13 +70,10 @@ footer {
   color: $color-neutral-grayish-blue;
 
   a {
-    text-decoration: none;
     color: $color-primary-bright-yellow;
-    transition: 0.2s;
   }
 
   a:hover {
-    text-decoration: underline;
     color: $color-primary-cyan;
   }
 }

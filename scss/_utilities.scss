@@ -1,0 +1,12 @@
+.card {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px $color-neutral-grayish-blue;
+  display: grid;
+  grid-template-columns: 100% 50% 50%;
+  border: solid red;
+}
+

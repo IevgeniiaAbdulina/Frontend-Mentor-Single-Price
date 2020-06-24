@@ -1,0 +1,19 @@
+%button {
+  display: inline-block;
+  width: 200px;
+  height: 56px;
+  border-radius: 8px;
+  padding: 8px 20px;
+  margin: 4px;
+  transition: 0.2s;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+}
+
+.button-primary {
+  @extend %button;
+  // background-color: lighten($color-primary-bright-yellow, 30%);
+  background-color: $color-primary-bright-yellow;
+}
