@@ -1,24 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700");
 .card {
-  width: 600px;
-  height: 400px;
-  margin: auto;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px #98a6bd;
+  width: 640px;
+  height: auto;
+  margin: 20% auto 0 auto;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px #98a6bd;
+}
+
+.header {
+  grid-area: header;
+}
+
+.subscription {
+  grid-area: subscription;
+}
+
+.why-us {
+  grid-area: why-us;
+}
+
+.container {
   display: grid;
-  grid-template-columns: 100% 50% 50%;
-  border: solid red;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "header header" "subscription why-us";
 }
 
 .button-primary {
   display: inline-block;
-  width: 200px;
-  height: 56px;
+  width: 100%;
+  border: 0;
   border-radius: 8px;
-  padding: 8px 20px;
-  margin: 4px;
+  padding: 18px 20px;
   transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .button-primary:hover {
@@ -29,17 +48,22 @@
   background-color: #c0df34;
 }
 
+.button-primary:hover {
+  background-color: #accb20;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: auto;
+  margin: auto;
   font-family: "Karla", sans-serif;
   font-size: 16px;
-  background-color: #e5eff5;
+  background-color: #d7dce5;
 }
 
 a {
@@ -51,8 +75,25 @@ a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.header {
+  padding: 40px 60px 40px 40px;
+}
+
 .header-title {
-  display: grid;
   background-color: #fff;
   color: #2ab2af;
 }
@@ -63,6 +104,38 @@ a:hover {
 
 .header-content {
   color: #98a6bd;
+  line-height: 1.5;
+}
+
+.subscription {
+  background-color: #2ab2af;
+  padding: 40px;
+  color: #fff;
+}
+
+.subscription-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.subscription-price span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.subscription-price p {
+  opacity: 0.5;
+}
+
+.subscription-content {
+  margin-bottom: 30px;
+}
+
+.why-us {
+  background-color: #2ab2af;
+  padding: 40px 60px 40px 40px;
 }
 
 .why-us .why-us-title {
@@ -80,15 +153,14 @@ a:hover {
 }
 
 footer {
+  text-align: center;
   font-size: 1rem;
+  padding: 60px 0;
   font-weight: 400;
   color: #98a6bd;
 }
 
 footer a {
-  color: #c0df34;
-}
-
-footer a:hover {
   color: #2ab2af;
+  font-weight: 700;
 }

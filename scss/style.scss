@@ -8,25 +8,41 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: auto;
+  margin: auto;
   font-family: $body-font-family;
   font-size: $body-font-size;
-  background-color: $color-neutral-light-gray;
+  background-color: lighten($color-neutral-grayish-blue, 20%);
 }
 
 a {
   text-decoration: none;
   transition: 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1rem;
 }
 
 .header {
+  padding: 40px 60px 40px 40px;
+
   &-title {
-    display: grid;
     background-color: #fff;
     color: $color-primary-cyan;
   }
@@ -35,19 +51,40 @@ a:hover {
   }
   &-content {
     color: $color-neutral-grayish-blue;
+    line-height: 1.5;
   }
 }
 
 .subscription {
-  .subscription-title {
+  background-color: $color-primary-cyan;
+  padding: 40px;
+  color: #fff;
+
+  &-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    span {
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+      margin-right: 12px;
+    }
+
+    p {
+      opacity: 0.5;
+    }
   }
-  .price {
-  }
-  .subscription-content {
+
+  &-content {
+    margin-bottom: 30px;
   }
 }
 
 .why-us {
+  background-color: $color-primary-cyan;
+  padding: 40px 60px 40px 40px;
+
   .why-us-title {
     font-size: 1.2rem;
     font-weight: $font-weight-bold;
@@ -65,15 +102,14 @@ a:hover {
 }
 
 footer {
+  text-align: center;
   font-size: 1rem;
+  padding: 60px 0;
   font-weight: $font-weight-regular;
   color: $color-neutral-grayish-blue;
 
   a {
-    color: $color-primary-bright-yellow;
-  }
-
-  a:hover {
     color: $color-primary-cyan;
+    font-weight: $font-weight-bold;
   }
 }

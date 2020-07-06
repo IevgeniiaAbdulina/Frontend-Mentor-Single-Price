@@ -1,12 +1,29 @@
 .card {
-  width: 600px;
-  height: 400px;
-  margin: auto;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px $color-neutral-grayish-blue;
-  display: grid;
-  grid-template-columns: 100% 50% 50%;
-  border: solid red;
+  width: 640px;
+  height: auto;
+  margin: 20% auto 0 auto;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px $color-neutral-grayish-blue;
 }
 
+.header {
+  grid-area: header;
+}
+
+.subscription {
+  grid-area: subscription;
+}
+
+.why-us {
+  grid-area: why-us;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "header header"
+    "subscription why-us";
+}
