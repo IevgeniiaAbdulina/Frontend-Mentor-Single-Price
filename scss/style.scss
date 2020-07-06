@@ -82,21 +82,30 @@ p {
 }
 
 .why-us {
-  background-color: $color-primary-cyan;
+  background-color: lighten($color-primary-cyan, 2%);
   padding: 40px 60px 40px 40px;
+  color: white;
 
   .why-us-title {
     font-size: 1.2rem;
     font-weight: $font-weight-bold;
-    color: white;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
   .links {
     a {
+      font-size: 1rem;
+      font-weight: $font-weight-regular;
+      line-height: 1.4;
       color: white;
+      opacity: 0.5;
     }
 
     a:hover {
-      color: $color-neutral-grayish-blue;
+      color: darken($color-primary-cyan, 20%);
     }
   }
 }

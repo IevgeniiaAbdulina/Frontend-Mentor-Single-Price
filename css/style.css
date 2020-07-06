@@ -134,22 +134,30 @@ p {
 }
 
 .why-us {
-  background-color: #2ab2af;
+  background-color: #2cbab8;
   padding: 40px 60px 40px 40px;
+  color: white;
 }
 
 .why-us .why-us-title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: white;
+}
+
+.why-us ul {
+  list-style-type: none;
 }
 
 .why-us .links a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
   color: white;
+  opacity: 0.5;
 }
 
 .why-us .links a:hover {
-  color: #98a6bd;
+  color: #165f5e;
 }
 
 footer {
