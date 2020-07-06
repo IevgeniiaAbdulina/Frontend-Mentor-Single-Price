@@ -2,10 +2,16 @@
 .card {
   width: 640px;
   height: auto;
-  margin: 20% auto 0 auto;
+  margin: 10% auto 0 auto;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 16px #98a6bd;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 310px;
+  }
 }
 
 .header {
@@ -25,6 +31,13 @@
   grid-template-rows: auto;
   grid-template-columns: 50% 50%;
   grid-template-areas: "header header" "subscription why-us";
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "subscription" "why-us";
+  }
 }
 
 .button-primary {
@@ -57,13 +70,18 @@
   padding: 0;
 }
 
+::selection {
+  -webkit-user-select: none;
+}
+
 body {
-  width: 80vw;
+  width: 100vw;
   height: auto;
   margin: auto;
   font-family: "Karla", sans-serif;
   font-size: 16px;
   background-color: #d7dce5;
+  overflow-x: hidden;
 }
 
 a {
@@ -93,6 +111,12 @@ p {
   padding: 40px 60px 40px 40px;
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding: 24px;
+  }
+}
+
 .header-title {
   background-color: #fff;
   color: #2ab2af;
@@ -111,6 +135,12 @@ p {
   background-color: #2ab2af;
   padding: 40px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .subscription {
+    padding: 24px;
+  }
 }
 
 .subscription-price {
@@ -139,6 +169,12 @@ p {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .why-us {
+    padding: 24px;
+  }
+}
+
 .why-us .why-us-title {
   font-size: 1.2rem;
   font-weight: 700;
@@ -163,12 +199,16 @@ p {
 footer {
   text-align: center;
   font-size: 1rem;
-  padding: 60px 0;
+  line-height: 1.5;
+  padding: 60px;
   font-weight: 400;
   color: #98a6bd;
 }
 
 footer a {
   color: #2ab2af;
-  font-weight: 700;
+}
+
+footer a:hover {
+  color: #165f5e;
 }

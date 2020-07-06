@@ -7,13 +7,18 @@
   padding: 0;
 }
 
+::selection {
+  -webkit-user-select: none;
+}
+
 body {
-  width: 80vw;
+  width: 100vw;
   height: auto;
   margin: auto;
   font-family: $body-font-family;
   font-size: $body-font-size;
   background-color: lighten($color-neutral-grayish-blue, 20%);
+  overflow-x: hidden;
 }
 
 a {
@@ -41,6 +46,9 @@ p {
 
 .header {
   padding: 40px 60px 40px 40px;
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
 
   &-title {
     background-color: #fff;
@@ -59,6 +67,9 @@ p {
   background-color: $color-primary-cyan;
   padding: 40px;
   color: #fff;
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
 
   &-price {
     display: flex;
@@ -85,6 +96,9 @@ p {
   background-color: lighten($color-primary-cyan, 2%);
   padding: 40px 60px 40px 40px;
   color: white;
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
 
   .why-us-title {
     font-size: 1.2rem;
@@ -113,12 +127,16 @@ p {
 footer {
   text-align: center;
   font-size: 1rem;
-  padding: 60px 0;
+  line-height: 1.5;
+  padding: 60px;
   font-weight: $font-weight-regular;
   color: $color-neutral-grayish-blue;
 
   a {
     color: $color-primary-cyan;
-    font-weight: $font-weight-bold;
+
+    &:hover {
+      color: darken($color-primary-cyan, 20%);
+    }
   }
 }
