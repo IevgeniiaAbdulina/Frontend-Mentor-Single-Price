@@ -17,7 +17,7 @@ body {
   margin: auto;
   font-family: $body-font-family;
   font-size: $body-font-size;
-  background-color: lighten($color-neutral-grayish-blue, 20%);
+  background: $color-neutral-light-gray;
   overflow-x: hidden;
 }
 
